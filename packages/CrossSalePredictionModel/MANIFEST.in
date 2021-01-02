@@ -1,0 +1,16 @@
+include *.txt
+include *.md
+include *.cfg
+include *.pkl
+recursive-include ./CrossSalePredictionModel/*
+
+include CrossSalePredictionModel/datasets/train.csv
+include CrossSalePredictionModel/datasets/test.csv
+include CrossSalePredictionModel/trained_models/*.pkl
+include CrossSalePredictionModel/VERSION
+
+include ./requirements.txt
+exclude *.log
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
