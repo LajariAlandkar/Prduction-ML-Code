@@ -7,6 +7,7 @@ def test_make_single_prediction():
     # Given
     test_data = load_dataset('test.csv')
     single_test_json = test_data[0:1].to_json(orient = 'records')
+    print('This is sigle test json', single_test_json)
     
     # When
     subject = make_prediction(input_data = single_test_json)
