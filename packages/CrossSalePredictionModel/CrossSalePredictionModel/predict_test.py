@@ -18,7 +18,7 @@ _resp_pipe = load_pipeline(file_name = pipeline_file_name)
 def make_prediction(input_data):
     # make prediction on test data using trained classifier
     
-    data = pd.DataFrame(input_data)
+    data = pd.DataFrame(eval(input_data))
     validated_data = validate_inputs(data)
     prediction = _resp_pipe.predict(validated_data[config.FEATURES])
     response = {"predictions":prediction, "version":_version}
